@@ -1,0 +1,88 @@
+
+
+
+/*Img Slider Css*/
+
+.carousel{
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+}
+
+.carousel-inner{
+  margin: 0px 0px 0px 0px;
+}
+
+.carousel-item{
+  transition: opacity 0.3s ease-in-out;
+}
+
+.img-fluid{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.carousel-control-prev,.carousel-control-next{
+  width: 30px;
+}
+
+.carouselprev-icon,.carouselnext-icon{
+  background-color: rgba(0,0,0);
+  width: 33px;
+  color:#fff;
+  height: 55px;
+}
+
+.carousel-control-prev .visually-hidden{
+  color: rebeccapurple;
+}
+
+.custom{
+  color: brown;
+}
+
+.vcustom{
+  color: tomato;
+}
+
+
+@media(max-width:1115px){
+  .carousel{
+    width: 100%;
+  }
+ 
+  .img-fluid{
+    height: auto;
+  }
+  
+}
+
+
+
+
+@media(max-width:768px){
+  .carousel-control-prev,.carousel-control-next{
+    width: 25px;
+  }
+  
+.carouselprev-icon,.carouselnext-icon{
+  width: 30px;
+  height: 45px;
+}
+}
+
+@media(max-width:468px){
+
+  .carousel-control-prev,.carousel-control-next{
+    width: 15px;
+  }
+  
+.carouselprev-icon,.carouselnext-icon{
+  width: 20px;
+  height: 30px;
+}
+
+}
+

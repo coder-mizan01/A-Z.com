@@ -1,0 +1,63 @@
+
+
+.mobile_menu{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.mobile_menu ul {
+ padding: 0px;
+}
+
+.mobile_menu ul li{
+    background-color: #ffffff;
+
+}
+
+.mobile_menu ul li a{
+    display:block;
+    width: 100%;
+    padding: 5px 10px 5px 10px;
+    color: #000;
+    text-align: start;
+    text-decoration: none;
+   
+}
+
+
+.mobile_menu ul li ul.dropdown{
+ height: 0px;
+ overflow: hidden;
+ transition: height 0.3s ease-in-out;
+
+}
+.mobile_menu ul li ul li a{
+    text-align: center;
+    border: 1px solid black;
+    margin-top: 1px;
+
+}
+
+.mobile_menu ul li a svg{
+    width: 25px;
+    padding: 0px 5px 0px 0px;
+    text-align: center;
+}
+
+.arrow_icon{
+    position: absolute;
+    right: 10px;
+}
+/*
+.mobile_menu ul li:hover> ul.dropdown{
+    display: block  ;
+}*/
+
+
+.active{
+    height: 100px;
+    transition: height 0.2s ease-in-out;
+}
+
+

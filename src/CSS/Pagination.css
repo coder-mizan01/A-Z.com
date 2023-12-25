@@ -1,0 +1,30 @@
+
+.pagination{
+    padding: 0px 0px 0px 5px;  
+    align-items: center;
+    background-color: #FFF;
+    width: 90%;
+    margin: 20px auto 20px auto;
+}
+.pagination a{
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0px 5px 0px 5px ;
+}
+
+.pagination .right-arrow{
+    margin-top: 2px;
+    opacity: 0.6;
+}
+
+@media(max-width:768px){
+    .pagination {
+        padding: 20px 0px 20px 19px;
+        height: 30px;
+        align-items: center;
+    }
+    .pagination a{
+        font-size: 11px;
+    }
+}

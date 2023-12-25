@@ -1,0 +1,30 @@
+
+
+#bottom-menu{
+    display: none;
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    text-align: center;
+    align-items: center;
+}
+
+.icon{
+    color: #ffffff;
+}
+
+
+#bottom-menu a{
+    flex: 25%;
+    font-size: 1.5rem;
+}
+
+@media(max-width:768px){
+    #bottom-menu{
+        display: flex;
+    }
+
+}
