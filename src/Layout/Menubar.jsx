@@ -24,7 +24,7 @@ import {
   faHouse,
   faPlugCircleBolt,
   faCircle,
-  faGift,
+  faGift
 } from "@fortawesome/free-solid-svg-icons";
 
 

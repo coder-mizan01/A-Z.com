@@ -6,222 +6,105 @@ import { Link, NavLink } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faLightbulb,
+  faMobileScreen,
+  faHeadphones,
+  faWifi,
+  faClock,
   faLaptop,
-  faNotesMedical,
-  faShirt,
-  faBasketShopping,
-  faCarSide,
-  faCouch,
-  faBaseball,
-  faTv,
-  faBaby,
-  faPerson,
+  faVolumeHigh,
+  faBook,
+  faHouse,
+  faPlugCircleBolt,
+  faCircle,
   faGift,
-  faListCheck,
   faChevronDown
 } from "@fortawesome/free-solid-svg-icons";
 
+
 //css
-import MobileMenuStyle from "../CSS/MobileMenu.module.css"
+import "../CSS/MobileMenu.css"
+
+//component
+import {categories} from "../Component/Categories"
 
 
 const MobileMenu = () => {
 
-  const [activeDropdown, setActiveDropdown] = useState(null);
 
-  const handleDropdownClick = (index) => {
-    setActiveDropdown(index === activeDropdown ? null : index);
-  };
+
+  //create an array of icon 
+  const iconArr = [
+    faLaptop,
+    faMobileScreen,
+    faHeadphones,
+    faClock,
+    faWifi,
+    faLightbulb,
+    faHouse,
+    faPlugCircleBolt,
+    faVolumeHigh,
+    faBook,
+    faCircle,
+    faGift,]
+
+
+    
+
 
   return (
-    <div className={MobileMenuStyle.mobile_menu}>
+     <>
+
+     {/*    <div className=''>
       <ul>
-        <li onClick={() => handleDropdownClick(0)}>
-          <NavLink >
-          <FontAwesomeIcon icon={faLaptop} />computer items <FontAwesomeIcon icon={faChevronDown} className={MobileMenuStyle.arrow_icon}  />
+        {Object.keys(categories).map((category,i)=>{
+          return <React.Fragment key={i}>
+
+        <li className="nav-item dropdown">
+          <NavLink className='' >
+          <FontAwesomeIcon icon={iconArr[i]} />{category}
+          <FontAwesomeIcon icon={faChevronDown}/>
           </NavLink>
 
-          <ul  className={`${
-              activeDropdown === 0 ? MobileMenuStyle.active : MobileMenuStyle.dropdown
-            }`} >
-            <li>
+          <ul>
+             {categories[category].map((c,i)=>{
+              return <li key={i}>
               <NavLink to="/electronics/smartphones">
-                Smart Phones
+                 {c}
               </NavLink>
             </li>
-            <li>
-              <NavLink to="electronics/computer-accessories">
-                ComputerAccessories
-              </NavLink>
-            </li>
+             })}
           </ul>
         </li>
 
 
-        <li  onClick={() => handleDropdownClick(1)}> 
-              <NavLink >
-                {" "}
-                <FontAwesomeIcon  icon={faPerson} /> Girls Fashion{" "}
-                <FontAwesomeIcon icon={faChevronDown}  className={MobileMenuStyle.arrow_icon} />
-              </NavLink>
-              <ul className={`${
-              activeDropdown === 1 ? MobileMenuStyle.active : MobileMenuStyle.dropdown
-            }`}>
-                <li>
-                  {" "}
-                  <NavLink to="/fashion/traditional-wears">
-                    Traditional wear
-                  </NavLink>
-                </li>
-                <li>
-                  {" "}
-                  <NavLink to="/fashion/western-wears">Western wears</NavLink>
-                </li>
-              </ul>
-            </li>
-
-
-            <li onClick={()=>{handleDropdownClick(2)}}>
-              <NavLink>
-                {" "}
-                <FontAwesomeIcon className={MobileMenuStyle.menu_icon}  icon={faShirt} /> Boy's Fashion 
-                <FontAwesomeIcon icon={faChevronDown}  className={MobileMenuStyle.arrow_icon} />
-              </NavLink>
-
-              <ul className={`${activeDropdown === 2 ?MobileMenuStyle.active : MobileMenuStyle.dropdown }`}>
-                <li>
-                  <NavLink to="/fashion/cloths">Cloths</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/fashion/shoes">Shoes</NavLink>
-                </li>
-              </ul>
-            </li>
-
-
-            <li onClick={()=>{handleDropdownClick(3)}}>
-              <NavLink>
-                {" "} 
-                <FontAwesomeIcon className={MobileMenuStyle.menu_icon}  icon={faNotesMedical} /> Health Items{" "}
-                <FontAwesomeIcon icon={faChevronDown}  className={MobileMenuStyle.arrow_icon} />
-              </NavLink>  
-
-              <ul className={`${activeDropdown === 3 ? MobileMenuStyle.active : MobileMenuStyle.dropdown}`}>
-                <li>
-                  <NavLink to="/healthcare/skincare">Skin Care</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/healthcare/skincare">Hair Care</NavLink>
-                </li>
-              </ul>
-            </li>
-
-
-            <li onClick={() => {
-                handleDropdownClick(4);
-              }}  >
-              <NavLink >
-                <FontAwesomeIcon className={MobileMenuStyle.menu_icon}  icon={faCarSide} /> Kids Toy's 
-                {" "}   <FontAwesomeIcon icon={faChevronDown}   className={MobileMenuStyle.arrow_icon} />
-              
-              </NavLink>
-
-            </li>
-
-
-            <li
-              onClick={() => {
-                handleDropdownClick(5);
-              }}
-
-            >
-              <NavLink>
-                <FontAwesomeIcon icon={faBasketShopping} /> Groceries{" "}
-                <FontAwesomeIcon icon={faChevronDown}   className={MobileMenuStyle.arrow_icon} />
-              </NavLink>
-              <ul  className={`${activeDropdown === 5 ? MobileMenuStyle.active : MobileMenuStyle.dropdown}`}>
-                <li>
-                  <NavLink to="/groceries/chocolate-candies">
-                    Chocolate & candy
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/groceries/cooking">Cooking Indregiants</NavLink>
-                </li>
-              </ul>
-            </li>
-
-
-            <li
-              onClick={() => {
-                handleDropdownClick(6);
-              }}
-            >
-              <NavLink >
-                {" "}
-                <FontAwesomeIcon icon={faBaby} /> Baby Care{" "}
-                <FontAwesomeIcon icon={faChevronDown}   className={MobileMenuStyle.arrow_icon} />
-              </NavLink>
-            </li>
-
-            <li
-              onClick={() => {
-                handleDropdownClick(7);
-              }}
-
-            >
-              <NavLink>
-                {" "}
-                <FontAwesomeIcon icon={faCouch} /> Furniture 
-                <FontAwesomeIcon icon={faChevronDown}   className={MobileMenuStyle.arrow_icon} /> 
-              </NavLink>
-              <ul className={`${activeDropdown === 7 ? MobileMenuStyle.active : MobileMenuStyle.dropdown}`}>
-                <li>
-                  <NavLink to="/furniture/table">table</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/">Furniture</NavLink>
-                </li>
-              </ul>
-            </li>
-
-            <li
-              onClick={() => {
-                handleDropdownClick(8);
-              }}
-
-            >
-              <NavLink>
-                <FontAwesomeIcon icon={faBaseball} />   
-                Sports 
-                <FontAwesomeIcon icon={faChevronDown}   className={MobileMenuStyle.arrow_icon} /> 
-              </NavLink>
-            </li>
-
-            <li
-              onClick={() => {
-                handleDropdownClick(9);
-              }}
-
-            >
-              <NavLink>
-                {" "}
-                <FontAwesomeIcon icon={faGift} /> 
-                Vouchers
-                <FontAwesomeIcon icon={faChevronDown}   className={MobileMenuStyle.arrow_icon} /> 
-              </NavLink>
-            </li>
-
-            <li onClick={()=> handleDropdownClick(10)}>
-              <NavLink>
-                <FontAwesomeIcon icon={faListCheck} /> Others{" "}
-                <FontAwesomeIcon icon={faChevronDown}   className={MobileMenuStyle.arrow_icon} /> 
-              </NavLink>
-            </li>
-
+          </React.Fragment>
+        })
+        }
 
       </ul>
+    </div> */}
+
+    <div className="">
+    {Object.keys(categories).map((category,i)=>{
+          return <React.Fragment key={i}>
+          <li className=" w-100 py-1 px-3 m-1 bg-white d-flex justify-content-between align-items-center" data-bs-toggle='dropdown' >
+          <Link className="mobile_menu_para" >{category}</Link>
+          <FontAwesomeIcon className="dropdown-toggle" icon={faChevronDown}/>
+        </li>
+        <ul className="dropdown-menu w-100  ">
+          {categories[category].map((subc,i)=>{
+            return <li key={i} className="nav-item">
+            <Link to={`/${category}/${subc}`} className="dropdown-item">{subc}</Link>
+           </li>
+          }) }
+        </ul>
+        </React.Fragment>
+    })}
+
+
     </div>
+     </>
   );
 };
 
