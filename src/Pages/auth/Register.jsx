@@ -18,8 +18,10 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [seePassword,setSeePassword] = useState(false);
+  const [singIn_loading, setsingIn_loading] = useState(false);
 
   const handleRegistration = async (e) => {
+    setsingIn_loading(true)
     e.preventDefault();
     try {
       const res = await axios.post(
@@ -27,8 +29,8 @@ const Register = () => {
         { name, email, password, phone }
       );
       if (res.data.success) {
-
-        toast.success('user is created')
+        setsingIn_loading(false)
+        alert(`register successful ${name} , now login please `)
         navigate('/Login')
       } else {
         console.log(res.data.message)
@@ -39,7 +41,7 @@ const Register = () => {
   };
 
   return (
-    <div className="register">
+    <div className={singIn_loading ? 'register opacity-50' : 'register'}>
       <form onSubmit={handleRegistration} className="register-form" >
         <div className="">
           <label htmlFor="">Name</label>
@@ -99,12 +101,12 @@ const Register = () => {
           <button type="button" className="hide-show-password" onClick={()=>setSeePassword(!seePassword)} >{seePassword ?<FaRegEye />:<FaRegEyeSlash />  } </button>
         </div>
 
-        <button type="submit" className="sign-up-btn">
+        <button type="submit" className="sign-up-btn" >
           Signup
         </button>
       </form>
 
-        <p className="">Already member
+        <p className="">Already member: &nbsp;
         <Link to='/Login'>
           login
         </Link>

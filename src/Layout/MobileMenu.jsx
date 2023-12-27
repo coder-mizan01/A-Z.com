@@ -55,42 +55,13 @@ const MobileMenu = () => {
   return (
      <>
 
-     {/*    <div className=''>
-      <ul>
-        {Object.keys(categories).map((category,i)=>{
-          return <React.Fragment key={i}>
-
-        <li className="nav-item dropdown">
-          <NavLink className='' >
-          <FontAwesomeIcon icon={iconArr[i]} />{category}
-          <FontAwesomeIcon icon={faChevronDown}/>
-          </NavLink>
-
-          <ul>
-             {categories[category].map((c,i)=>{
-              return <li key={i}>
-              <NavLink to="/electronics/smartphones">
-                 {c}
-              </NavLink>
-            </li>
-             })}
-          </ul>
-        </li>
-
-
-          </React.Fragment>
-        })
-        }
-
-      </ul>
-    </div> */}
 
     <div className="">
     {Object.keys(categories).map((category,i)=>{
           return <React.Fragment key={i}>
-          <li className=" w-100 py-1 px-3 m-1 bg-white d-flex justify-content-between align-items-center" data-bs-toggle='dropdown' >
-          <Link className="mobile_menu_para" >{category}</Link>
-          <FontAwesomeIcon className="dropdown-toggle" icon={faChevronDown}/>
+          <li className="w-auto py-1 px-3 m-1 bg-white d-flex justify-content-between align-items-center " data-bs-toggle='dropdown' >
+          <Link className="mobile_menu_para" >{category}</Link> 
+          <FontAwesomeIcon className="dropdown-toggle" icon={faChevronDown} style={{cursor:'pointer'}}/>
         </li>
         <ul className="dropdown-menu w-100  ">
           {categories[category].map((subc,i)=>{

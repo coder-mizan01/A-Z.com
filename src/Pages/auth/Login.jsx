@@ -23,8 +23,8 @@ const Register = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const [click, setClick] = useState(false);
+  const [singIn_loading, setsingIn_loading] = useState(false);
 
   const handleRegistration = async (e) => {
     e.preventDefault();
@@ -33,10 +33,8 @@ const Register = () => {
         email,
         password,
       });
-      if (res.data.success) {
-
-        //if login is successful then this alert message will come
-        console.log(res.data.token);
+      if (res.data.success) { 
+        setsingIn_loading(true)
 
       //dispatch setUser reducer to authentication 
         dispatch(
@@ -54,7 +52,7 @@ const Register = () => {
         localStorage.setItem("password",JSON.stringify(res.data.user.password));
         localStorage.setItem("role",JSON.stringify(res.data.user.role));
         localStorage.setItem("token",JSON.stringify(res.data.token));
-
+        
         navigate(location.state || "/");
       } else {
         console.log(res.data.message);
@@ -65,7 +63,7 @@ const Register = () => {
   };
 
   return (
-    <div className="login">
+    <div className='login' >
 
       <form onSubmit={handleRegistration} className="login-form">
         <div className="mb-3">
@@ -107,7 +105,7 @@ const Register = () => {
           </button>
         </div>
 
-        <button type="submit" className="sign-in-btn">
+        <button type="submit" className="sign-in-btn" >
           Sign in
         </button>
       </form>

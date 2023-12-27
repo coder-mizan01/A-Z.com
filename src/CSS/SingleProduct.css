@@ -19,6 +19,8 @@
     width: 400px;
     height: 400px;
 }
+
+
 .thumbnails{
     text-align: start;
 }
@@ -173,8 +175,8 @@ hr{
 
 @media(max-width:468px){
 .Images img{
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: auto;
     }
 
     .Single-Product-Details img{

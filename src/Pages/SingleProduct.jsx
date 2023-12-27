@@ -79,13 +79,13 @@ const SingleProduct = () => {
 
             <div className="Single-Product-Details">
               <p className="title">{title}</p>
-              <p className="brand"> brand: {brand} | more product from </p>
+              <p className="brand"> brand: {brand}</p>
               <p>
                 see more:{" "}
                 <Link to={`/${category}/${subcategory}`}>{subcategory}</Link>
               </p>
 
-              <p> in stock : {quantity} pice</p>
+              <p> status : <Link target="_blank" to={`https://www.facebook.com/a.to.z.bd.shop/`}>want to know?</Link></p>
               <p className="star">
                 {" "}
                 <AiFillStar />

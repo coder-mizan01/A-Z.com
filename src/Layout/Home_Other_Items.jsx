@@ -132,6 +132,11 @@ const Home_Other_Items = () => {
       },
     ],
   };
+
+    //product quantity state
+    const QuantityofProduct = useSelector((state) => state.productquantitycounter.count);
+    const {count} = QuantityofProduct;
+  
      
     
   //receive productsObj from allproducts by useSelector
@@ -139,10 +144,7 @@ const Home_Other_Items = () => {
 
   //destructure property from object
    const {loading , products , error} = productsObj;
-  
-   //declare productquantity variable
-  let productQuantity;
-
+    
   //filter other_items from products
   let other_items;
   other_items = products.filter((pro) => {
@@ -184,9 +186,9 @@ const Home_Other_Items = () => {
                 <div className="addcart">
                   <p className="price">Tk.{price}</p>
                   <AddToCart
-                    product={pro}
+                    product={{ title, slug, price, _id ,count}}
                     name={"+add"}
-                    quantity={productQuantity}
+                    quantity={QuantityofProduct}
                   />
 
                 </div>

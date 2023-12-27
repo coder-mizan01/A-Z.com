@@ -18,12 +18,12 @@ const TopHeader = () => {
   <section id={TopHeaderCSS.topheader}>
 
    <div className={TopHeaderCSS.topheader_leftside}>
-    <Link to="/" >+88092789565</Link> 
-    <Link to="/" >TRACK MY ORDER</Link> 
+    <Link to="/" onClick={()=>alert('please call by phone')}>Call: 01955058284</Link> 
+    <Link  to={`/`} onClick={()=>window.alert('not yet tracking method please contact Customer Care')} >Track My Order</Link> 
    </div>
 
    <div className={TopHeaderCSS.topheader_rightside}>
-   <Link to="/" >CUSTOMER CARE</Link> 
+   <Link target='blank' to={`https://www.facebook.com/a.to.z.bd.shop/`} >Customer Care</Link> 
     <Link to="/" >Language</Link> 
 
 

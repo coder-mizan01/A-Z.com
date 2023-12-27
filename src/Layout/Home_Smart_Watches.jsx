@@ -135,8 +135,9 @@ const Home_Smart_Watches = () => {
     
 
   
-   //declare productquantity variable
-   let productQuantity;
+  //product quantity state
+  const QuantityofProduct = useSelector((state) => state.productquantitycounter.count);
+  const {count} = QuantityofProduct;
 
     
   //receive productsObj from allproducts by useSelector
@@ -193,9 +194,9 @@ const Home_Smart_Watches = () => {
                 <div className="addcart">
                   <p className="price">Tk.{price}</p>
                   <AddToCart
-                    product={smart_watches}
+                    product={{ title, slug, price, _id , count}}
                     name={"+add"}
-                    quantity={productQuantity}
+                    quantity={QuantityofProduct}
                   />
 
                 </div>
