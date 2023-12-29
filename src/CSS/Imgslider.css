@@ -25,14 +25,14 @@
 
 
 .carousel-control-prev,.carousel-control-next{
-  width: 30px;
+  width: 40px;
 }
 
 .carouselprev-icon,.carouselnext-icon{
   background-color: rgba(0,0,0);
   width: 33px;
   color:#fff;
-  height: 55px;
+  height: 65px;
 }
 
 .carousel-control-prev .visually-hidden{

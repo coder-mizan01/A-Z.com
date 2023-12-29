@@ -1,14 +1,17 @@
 
 
-img{
-   width: 50px;
-   height: auto;
-   margin: 5px;
-   z-index: 10;
-   opacity: 1;
+.Messeage{
+
 }
 
-.specification_button{
+.alert p{
+    font-size: 1.1rem;
+    font-weight: 500;
+
+}
+
+
+.messeage-btn{
     font-family: Helvetica, Arial, sans-serif;
     background-color: #1877F2;
     color: #FFFFFF;
@@ -19,4 +22,7 @@ img{
     font-weight: 600;
     text-decoration: none;
 
+    @media(max-width:768px){
+        padding: 5px 20px;
+    }
 }

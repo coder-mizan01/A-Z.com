@@ -37,8 +37,10 @@ import PrivateUserRouter from './PrivateUserRouter';
 import PrivateAdminRouter from './PrivateAdminRouter';
 import UpdateProduct from '../Pages/Admin/UpdateProduct';
 import TopHeader from '../Layout/TopHeader';
-import ConfirmOrderPage from '../Layout/ConfirmOrderPage';
+import ConfirmOrderPage from '../Pages/ConfirmOrderPage';
 import CC from '../CC';
+import Complete_Order from '../Pages/Complete_Order';
+
 
 
 
@@ -235,6 +237,8 @@ const Router = () => {
         <Route path='/login' element={<Login />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/confirm-order' element={<ConfirmOrderPage />} />
+        <Route path='/complete-order' element={<Complete_Order />} />
+
         <Route path='/mobile-menu' element={<MobileMune />} />
         <Route path='/admin/cc' element={<CC />} />
 

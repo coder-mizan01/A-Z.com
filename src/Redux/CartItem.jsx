@@ -28,10 +28,15 @@
             let updatedCart;
             updatedCart = state.Cart.filter((item)=> item._id !== action.payload)
             state.Cart = updatedCart;
-        },  
+        },
+
+        ResetCart : (state,action) =>{
+            let resetCart;
+            state.Cart = [];
+        }
     }
  })
 
- export const {AddtoCart , DeleteFromCart} = CartSlice.actions 
+ export const {AddtoCart , DeleteFromCart,ResetCart} = CartSlice.actions 
 
  export default CartSlice.reducer;

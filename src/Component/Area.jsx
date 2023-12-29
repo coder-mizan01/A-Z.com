@@ -93,6 +93,7 @@ export const cities = {
       "Bangladesh University of Professionals(BUP)",
       "Baridhara Diplomatic Zone",
       "Baridhara DOHS",
+      
     ],
     Gazipur: [
       "Bangla Bazar (Mawna)",

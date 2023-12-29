@@ -70,7 +70,7 @@
   padding: 0px 10px 0px 10px;
 }
 
-.cart-total .place_order a{
+.cart-total .place_order button{
   width:180px;
   display: block;
   border: none;

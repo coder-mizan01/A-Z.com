@@ -16,6 +16,7 @@ import SideFilters from "./SideFilters";
 
 import { useDispatch ,useSelector } from "react-redux";
 import { LowestPriceProduct , HighestPriceProduct, ProductFromAtoZ, ProductFromZtoA  ,categoryWiseProductsAction} from "../Redux/FilterProduct";
+import Message from "./Message";
 const CategoryPage = ({ products }) => {
   const copyProducts = [...products];
   let SingleProduct = copyProducts[0];
@@ -105,7 +106,13 @@ const [selectedOption , setSelectedOption] = useState("");
             );
           })}
            </div> 
+
+           
       </div>
+  
+  <Message />
+
+
     </>
   );
 };

@@ -132,7 +132,7 @@ const Headphone_Items = () => {
       },
     ],
   };
-     
+      
   //product quantity state
    const QuantityofProduct = useSelector((state) => state.productquantitycounter.count);
    const {count} = QuantityofProduct;

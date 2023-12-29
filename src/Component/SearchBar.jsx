@@ -31,7 +31,7 @@ const SearchBar = () => {
   return (
     <>
     <div className={HeaderCSS.searchBar}>
-          <input type="text" placeholder="Search in shopee" value={searchValue}  onChange={handleSearch}  />
+          <input type="text" placeholder="Search in A-Z" value={searchValue}  onChange={handleSearch}  />
           <button type="search">
             <AiOutlineSearch
               className={HeaderCSS.searchIcon}
