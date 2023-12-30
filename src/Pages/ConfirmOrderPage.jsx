@@ -100,7 +100,7 @@ const ConfirmOrderPage = () => {
             <input
               className={style.email}
               type="text"
-              placeholder="enter your email"
+              placeholder="email (not necessary)"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
             />
@@ -118,7 +118,7 @@ const ConfirmOrderPage = () => {
             <input
               className={style.alter_number}
               type="text"
-              placeholder="enter your alternative number"
+              placeholder="enter alternative number"  
               onChange={(e) => setAlternative_number(e.target.value)}
               value={alternative_number}
             />

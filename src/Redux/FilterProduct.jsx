@@ -30,34 +30,20 @@
          let products = action.payload;
          state.category_Wise_Products  = [...products].sort((a,b)=> b.title.localeCompare(a.title));
         },
-
-        polobrand :(state,action)=>{
-         let products = action.payload;
-         state.category_Wise_Products = [...products].filter((product)=> product.brand==='polo' )
-        },
-
-        nobrand:(state,action)=>{
+        HavitBrand : (state,action) => {
           let products = action.payload;
-          state.category_Wise_Products = [...products].filter((product)=> product.brand ==='no-brand' )
+          state.category_Wise_Products = [...products].filter((product)=>product.brand === "Havit")
         },
-        hpBrand : (state,action) => {
-           let products = action.payload;
-           state.category_Wise_Products = [...products].filter((product)=> product.brand === "hp")
-        },
-        TreateBrand : (state,action) => {
+        HocoBrand : (state,action) => {
           let products = action.payload;
-          state.category_Wise_Products = [...products].filter((product)=> product.brand === "Treate")
+          state.category_Wise_Products = [...products].filter((product)=>product.brand === "Hoco")
         },
-        NestleBrand : (state,action) => {
+        FantechBrand : (state,action) => {
           let products = action.payload;
-          state.category_Wise_Products = [...products].filter((product)=> product.brand === "Nestle")
+          state.category_Wise_Products = [...products].filter((product)=>product.brand === "Fantech")
         },
-        PranBrand : (state,action) => {
-          let products = action.payload;
-          state.category_Wise_Products = [...products].filter((product)=>product.brand === "pran")
-        }
     }
  })
 
- export const {categoryWiseProductsAction,LowestPriceProduct , HighestPriceProduct , ProductFromAtoZ, ProductFromZtoA , polobrand,nobrand,hpBrand,TreateBrand,NestleBrand,PranBrand} = FilterProductSlice.actions;
+ export const {categoryWiseProductsAction,LowestPriceProduct , HighestPriceProduct , ProductFromAtoZ, ProductFromZtoA , polobrand,HavitBrand,HocoBrand,FantechBrand} = FilterProductSlice.actions;
  export default FilterProductSlice.reducer;

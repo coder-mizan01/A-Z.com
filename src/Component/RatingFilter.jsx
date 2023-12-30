@@ -14,7 +14,7 @@ const RatingFilter = () => {
   return (
     <>
  
-   <div className={classes.filter_by_rating}>
+   <div className={classes.filter_by_rating} onClick={()=>alert('feauter will be updated')} >
       <div className={classes.toggle_div}>
         <h5>Rating</h5>
         <FontAwesomeIcon  icon={faChevronDown} />

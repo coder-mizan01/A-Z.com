@@ -79,7 +79,6 @@
   opacity: 1;
   color: black;
   transition: 0.2s;
- 
 }
 
 
@@ -113,11 +112,28 @@
   z-index: 10;
   width: 100%;
   height: auto;
+  max-height: 400px;
+  overflow: scroll;
   box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
 }
 
-.search_value ul{
-  list-style: none;
+.search_value .value{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 8px 0px 8px;
+  margin: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover{
+    background-color: #F3F5F9;
+  }
+}
+
+.value div p{
+  color: #000;
+  font-weight: 600;
+  margin: 0;
 }
 
 .cart_user_div{
