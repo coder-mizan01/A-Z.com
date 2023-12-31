@@ -100,13 +100,6 @@ hr{
     display: flex;
     justify-content:flex-start
 }
-.Single-Product-buttons .buy-now{
-  margin-right: 10px;
-  padding: 8px 80px;
-  color: #EFF0F5;
-  border: none;
-  background: #26ABD4;
-}
 
 #Single-Product-Page .Single-Product-Details .Single-Product-buttons .add-to-cart{
     padding: 8px 80px;

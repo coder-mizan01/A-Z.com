@@ -1,0 +1,53 @@
+
+.order{
+    border: 1px solid black;
+}
+
+.customerdetails{
+    display: flex;
+}
+
+.customerdetails p{
+    background-color: #ddd;
+    padding: 0px 5px;
+    margin: 0px 2px;
+}
+
+.orderItems div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.order_quantity{
+    display: inline-block;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+table{
+  width: 100%;  
+  border: 1px solid black   ;
+}   
+
+thead{
+    background-color: #555;
+    color: #fff;
+}
+tr{
+    border: 1px solid black   ;
+}
+
+td{
+    border: 1px solid black   ;
+}
+
+
+
+.orderID{
+    width: 15%;
+
+}

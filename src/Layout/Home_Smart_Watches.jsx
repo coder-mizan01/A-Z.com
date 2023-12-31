@@ -146,7 +146,7 @@ const Home_Smart_Watches = () => {
   //destructure property from object
    const {loading , products , error} = productsObj;
 
-
+ 
 
   //filter electronics products
   let smart_watches;
@@ -154,7 +154,6 @@ const Home_Smart_Watches = () => {
     return pro.category === "smart_watches" ;
   })
 
-  console.log(smart_watches);
 
   //destructure category from computer items
   let {category} = smart_watches[0] !== undefined && smart_watches[0]

@@ -43,7 +43,7 @@ const ConfirmOrderPage = () => {
   const [city, setCity] = useState("");
   const [area, setArea] = useState("");
   const [details_address, setDetails_address] = useState("");
-  const [delivery_charge , setDelivery_charge] = useState(80);
+  const [delivery_charge , setDelivery_charge] = useState(0);
 
 
   //change city dynamically
@@ -53,7 +53,7 @@ const ConfirmOrderPage = () => {
 
     //set the delivery charge by selected area
     if(e.target.value === "Dhaka"){
-      setDelivery_charge(80)
+      setDelivery_charge(60)
     }else{
       setDelivery_charge(120)
     }

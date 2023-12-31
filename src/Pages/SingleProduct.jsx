@@ -57,8 +57,6 @@ const SingleProduct = () => {
     var {
       _id,
       title,
-      specification_property,
-      specification_value,
       subcategory,
       subcategory,
       category,

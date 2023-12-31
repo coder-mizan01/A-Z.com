@@ -1,7 +1,7 @@
 import React from "react";
 
 //packages
-
+import {Link} from "react-router-dom"
 
 //css
 import "../CSS/Imgslider.css";
@@ -18,15 +18,15 @@ const Imgslidersr = () => {
   <div className="carousel-inner">
 
     <div className="carousel-item active">
-    <a href="/#/electronics/computer-accessories">
+    <Link to={`/computer_items`}>
       <img src="electronics.jpg" className="img-fluid" alt="..." />
-      </a>
+      </Link>
     </div>
 
     <div className="carousel-item">
-    <a href="/#/fashion/cloths">
-      <img src="cover1.png " className="img-fluid" alt="..." />
-      </a>
+    <Link to={`/`}>
+      <img src="fashioncover3.jpg " className="img-fluid" alt="..." />
+      </Link>
     </div>
 
   </div>

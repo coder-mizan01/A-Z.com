@@ -21,11 +21,12 @@
   height: 500px;
   object-fit: cover;
   object-position: center;
+  margin: 0px;
 }
 
 
 .carousel-control-prev,.carousel-control-next{
-  width: 40px;
+  width: 33px;
 }
 
 .carouselprev-icon,.carouselnext-icon{
@@ -64,7 +65,7 @@
 
 @media(max-width:768px){
   .carousel-control-prev,.carousel-control-next{
-    width: 25px;
+    width: 30px;
   }
   
 .carouselprev-icon,.carouselnext-icon{
@@ -76,12 +77,12 @@
 @media(max-width:468px){
 
   .carousel-control-prev,.carousel-control-next{
-    width: 15px;
+    width: 20px;
   }
   
 .carouselprev-icon,.carouselnext-icon{
   width: 20px;
-  height: 30px;
+  height: 40px;
 }
 
 }

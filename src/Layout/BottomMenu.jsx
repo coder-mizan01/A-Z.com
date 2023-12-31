@@ -21,7 +21,7 @@ const BottomMenu = () => {
 
            <Link to='/'><AiOutlineHome className='icon' /></Link>
             <Link to='/mobile-menu'><HiOutlineMenu className='icon' /></Link>
-            <Link><RiCustomerService2Fill className='icon' /> </Link>
+            <Link to={`https://www.facebook.com/a.to.z.bd.shop/`} target='blank' ><RiCustomerService2Fill className='icon' /> </Link>
             <Link to='/cart'><AiOutlineShoppingCart className='icon' /></Link>
             <Link to='/dashboard'><BiUserCircle className='icon'/></Link>
 
