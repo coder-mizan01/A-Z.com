@@ -15,6 +15,7 @@ const Microphone = () => {
        let microphone = products.filter((pro)=>{
         return pro.subcategory === "microphone";
        })
+
   return (
     <>
     <CategoryPage products={microphone} />

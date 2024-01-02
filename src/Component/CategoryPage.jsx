@@ -18,6 +18,7 @@ import { useDispatch ,useSelector } from "react-redux";
 import { LowestPriceProduct , HighestPriceProduct, ProductFromAtoZ, ProductFromZtoA  ,categoryWiseProductsAction} from "../Redux/FilterProduct";
 import Message from "./Message";
 const CategoryPage = ({ products }) => {
+  console.log(products);  
   const copyProducts = [...products];
   let SingleProduct = copyProducts[0];
 
@@ -71,41 +72,41 @@ const [selectedOption , setSelectedOption] = useState("");
 
         <SideFilters products={products} /> 
    
-       <div className={CategoryPageCSS.category_page_products}>
+        {category_Wise_Products.length > 0 ?  <div className={CategoryPageCSS.category_page_products}>
  
       
 
-          {category_Wise_Products?.map((pro) => {
-            const {title, slug, price, _id , subcategory, brand} = pro;
+ {category_Wise_Products.map((pro) => {
+   const {title, slug, price, _id , subcategory, brand} = pro;
 
-            return (
-              <div className={CategoryPageCSS.pro} key={_id}>
+   return (
+     <div className={CategoryPageCSS.pro} key={_id}>
 
-                <Link to={`/SingleProduct/${slug}`}>
-                  <img
-                    className={CategoryPageCSS.category_pro_img}
-                    src={`${config.apiUrl}/api/product/product-photo/${pro._id}`}
-                    alt=""
-                  />
-                </Link>
+       <Link to={`/SingleProduct/${slug}`}>
+         <img
+           className={CategoryPageCSS.category_pro_img}
+           src={`${config.apiUrl}/api/product/product-photo/${pro._id}`}
+           alt=""
+         />
+       </Link>
 
-                <div className={CategoryPageCSS.category_pro_content}>
-                     <p className="title">{ title.length > 20 ? title.slice(0,28)+'...': title}</p>
-                     <p className="star">
-                      {" "}
-                      <AiFillStar />
-                      <AiFillStar /> <AiFillStar />
-                      <AiFillStar />
-                      <AiOutlineStar /> 
-                    </p>
-                    <p className="price">Tk.{price}</p>
-                    
-                  </div>
+       <div className={CategoryPageCSS.category_pro_content}>
+            <p className="title">{ title.length > 20 ? title.slice(0,28)+'...': title}</p>
+            <p className="star">
+             {" "}
+             <AiFillStar />
+             <AiFillStar /> <AiFillStar />
+             <AiFillStar />
+             <AiOutlineStar /> 
+           </p>
+           <p className="price">Tk.{price}</p>
+           
+         </div>
 
-              </div>
-            );
-          })}
-           </div> 
+     </div>
+   );
+ })}
+  </div> : <h2 style={{textAlign:"center"}}>product will be post on the website , if you want to purchase click below on the facebook button</h2> }
 
            
       </div>

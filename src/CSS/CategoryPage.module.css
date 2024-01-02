@@ -73,3 +73,8 @@
 .pro .category_pro_content {
   padding: 0px 0px 0px 5px;
 }
+
+.no_product{
+  display: block;
+  width: 100%;
+}

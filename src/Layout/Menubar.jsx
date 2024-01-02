@@ -35,11 +35,11 @@ const Menubar = ({ onScrollMenuBar, onClickMenuBar }) => {
     faMobileScreen,
     faHeadphones,
     faClock,
+    faPlugCircleBolt,
+    faVolumeHigh,
     faWifi,
     faLightbulb,
     faHouse,
-    faPlugCircleBolt,
-    faVolumeHigh,
     faBook,
     faCircle,
     faGift,]

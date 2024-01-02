@@ -40,7 +40,7 @@ const CC = () => {
           {orders !== undefined
             && orders.map((order,i) => {
                 let {cart,name,email,number,alternative_number,city,area,details_address} = order;
-                return <div key={i} className="order">
+                return <div key={i} cclassName="order">
                     <div className="customerdetails">
                       <p>{name}</p>
                       <p>{email}</p>
