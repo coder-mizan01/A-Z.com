@@ -1,5 +1,7 @@
 import React,{useState,useEffect} from "react";
-import { Link } from "react-router-dom";
+
+import { Link ,useLocation  } from "react-router-dom";
+import { useDispatch ,useSelector } from "react-redux";
 
 //Api-link
 import config from "../config.json"
@@ -12,11 +14,19 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 //component
 import Pagination from "./Pagination";
 import SideFilters from "./SideFilters";
-
-
-import { useDispatch ,useSelector } from "react-redux";
-import { LowestPriceProduct , HighestPriceProduct, ProductFromAtoZ, ProductFromZtoA  ,categoryWiseProductsAction} from "../Redux/FilterProduct";
 import Message from "./Message";
+import Spinner from "./Spinner"
+
+
+import { LowestPriceProduct , 
+  HighestPriceProduct,
+  ProductFromAtoZ,
+  ProductFromZtoA,
+  categoryWiseProductsAction} from "../Redux/FilterProduct";
+
+
+
+
 const CategoryPage = ({ products }) => {
   console.log(products);  
   const copyProducts = [...products];
@@ -51,8 +61,6 @@ const [selectedOption , setSelectedOption] = useState("");
  }
 
 
-
-
   return (  
     <>
 
@@ -72,7 +80,7 @@ const [selectedOption , setSelectedOption] = useState("");
 
         <SideFilters products={products} /> 
    
-        {category_Wise_Products.length > 0 ?  <div className={CategoryPageCSS.category_page_products}>
+{category_Wise_Products.length > 0 ?  <div className={CategoryPageCSS.category_page_products}>
  
       
 
@@ -106,13 +114,10 @@ const [selectedOption , setSelectedOption] = useState("");
      </div>
    );
  })}
-  </div> : <h2 style={{textAlign:"center"}}>product will be post on the website , if you want to purchase click below on the facebook button</h2> }
-
-           
+  </div> :  <Spinner  /> }
       </div>
   
   <Message />
-
 
     </>
   );
