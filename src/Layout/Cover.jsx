@@ -10,11 +10,11 @@ import ImgSlider from "./ImgSlider";
 const Cover = () => {
   return (
     <>
-      <section id="cover">
+        <section className="cover">
         <Menubar />
-        
         <ImgSlider />
-      </section>
+        </section>
+
     </>
   );
 };

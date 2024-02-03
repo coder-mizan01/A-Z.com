@@ -14,11 +14,11 @@ const Imgslidersr = () => {
     <>
   
 
-<div id="carouselExampleFade" className="carousel slide carousel-fade">
+<div id="carouselExampleFade" className="carousel slide carousel-fade ">
   <div className="carousel-inner">
 
     <div className="carousel-item active">
-    <Link to={`/computer_items`}>
+    <Link to={`/`}>
       <img src="electronics.jpg" className="img-fluid" alt="..." />
       </Link>
     </div>

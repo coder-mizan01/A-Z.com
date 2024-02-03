@@ -174,7 +174,7 @@ const Headphone_Items = () => {
                   <div className="product-img">
                     <img
                       className="home-pro-img"
-                      src={`${config.apiUrl}/api/product/product-photo/${pro._id}`}
+                      src={`${config.apiUrl}/api/product/product-photo/${_id}`}
                       alt=""
                     />
                   </div>
