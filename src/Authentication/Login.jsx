@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 //packages
 import axios from "axios";
-import config from "../../config.json";
+import config from "../config.json"
 import { useNavigate, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import {setUser} from "../../Redux/Authentication";
+import {setUser} from "../Redux/Authentication";
 import { Link } from "react-router-dom";
 
 //global hook
 
 //css
-import "../../CSS/Login.css";
+import "../CSS/Login.css";
 
 //icons
 import { FaRegEye } from "react-icons/fa";

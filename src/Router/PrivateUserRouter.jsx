@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import config from "../config.json"
 import Dashboard from "../Pages/User/Dashboard"
-import Login from "../Pages/auth/Login"
+import Login from "../Authentication/Login"
 import axios from 'axios';
 
 import { useSelector } from 'react-redux';

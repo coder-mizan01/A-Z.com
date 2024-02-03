@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import config from "../../config.json";
+import config from "../config.json";
 import { useNavigate, Link } from "react-router-dom";
 
 //icons
@@ -8,7 +8,7 @@ import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa"
 
 //css
-import "../../CSS/Register.css";
+import "../CSS/Register.css";
 
 
 const Register = () => {

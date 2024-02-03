@@ -31,7 +31,6 @@
         },
 
         ResetCart : (state,action) =>{
-            let resetCart;
             state.Cart = [];
         }
     }

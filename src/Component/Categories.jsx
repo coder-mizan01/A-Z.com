@@ -10,7 +10,7 @@ export const categories = {
     light_lamp: ["torch_light"],
     home_appliances: ["dry_iron"],
     books: ["self_motivation", "islamic_book", "academic_book"],
-    other_items: ["calculator", "toothbrush", "bag_luggage"],
+    other_items: ["calculator", "toothbrush", "bag_luggage","toy"],
     voucher: ["gift_voucher", "wedding_voucher", "love_voucher"]
 }
 

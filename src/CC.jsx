@@ -10,8 +10,7 @@ import "./CSS/cc.css";
 const CC = () => {
   const state = useSelector((state) => state.authentication);
 
-  const { slug } = useParams();
-
+  const { slug } = useParams()
   const [orders, setOrders] = useState([]);
 
   //fetch handleOrder
@@ -40,7 +39,7 @@ const CC = () => {
           {orders !== undefined
             && orders.map((order,i) => {
                 let {cart,name,email,number,alternative_number,city,area,details_address} = order;
-                return <div key={i} cclassName="order">
+                return <div key={i} className="order">
                     <div className="customerdetails">
                       <p>{name}</p>
                       <p>{email}</p>

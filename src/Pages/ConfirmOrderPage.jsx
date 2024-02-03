@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate , useLocation } from "react-router-dom";
 import { useSelector,useDispatch } from "react-redux";
+
 import axios from "axios";
 
 //component
@@ -86,7 +87,7 @@ const ConfirmOrderPage = () => {
     <>
       <section className={ click ? style.confirm_order2  : style.confirm_order}>
 
-        <form className={style.address_form} onSubmit={handleConfirmOrder}>
+        <form  className={style.address_form} onSubmit={handleConfirmOrder}> 
           <div>
             <input
               className={style.name}

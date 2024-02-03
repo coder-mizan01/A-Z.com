@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import config from "../config.json"
 import AdminDashboard from "../Pages/Admin/AdminDashboard"
-import Login from "../Pages/auth/Login";
+import Login from "../Authentication/Login";
 import axios from 'axios';
 
 

@@ -1,4 +1,4 @@
-  import React from 'react'
+import React from 'react'
 import {Routes,Route} from "react-router-dom";
 import { HashRouter as BrowserRouter} from "react-router-dom"
 
@@ -17,8 +17,8 @@ import Users from '../Pages/Admin/Users';
 
 
 //auth
-import Register from '../Pages/auth/Register';
-import Login from '../Pages/auth/Login';
+import Register from '../Authentication/Register';
+import Login from '../Authentication/Login'
 import Dashboard from '../Pages/User/Dashboard';
 
 
@@ -102,7 +102,7 @@ const dynamicComponents = {
  calculator : React.lazy(()=>import('../Pages/SubMenuPages/Other_Item/Calculator')),
  toothbrush : React.lazy(()=>import('../Pages/SubMenuPages/Other_Item/ToothBrush')),
  bag_luggage : React.lazy(()=>import('../Pages/SubMenuPages/Other_Item/Bag_Luggage')),
- smart_tv_box : React.lazy(()=>import('../Pages/SubMenuPages/Other_Item/Smart_TV_Box')),
+ toy : React.lazy(()=>import('../Pages/SubMenuPages/Other_Item/Toy')),
 
  //home appliances subpages
  dry_iron : React.lazy(()=>import("../Pages/SubMenuPages/Home_Appliances/Dry_Iron")),
