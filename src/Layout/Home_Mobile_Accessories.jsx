@@ -158,12 +158,16 @@ const Mobile_Accessories = () => {
    //declare productquantity variable
    let productQuantity;
 
- //destructure the value 
-  const {category} = mobile_accessories[0] !== undefined && mobile_accessories[0]
+  //destructure the category name 
+  let {category} = mobile_accessories[0] !== undefined && mobile_accessories[0];
+
+  //remove the undesquare from string
+  let category_Withouth_underSquare = category !== undefined ? category.replace(/_/g," ") : "";
+
   return (
     <>
           <div className="slide-header">
-         <h2>{category}</h2>
+         <p>{category_Withouth_underSquare}</p>
          <Link className="button buttontext" to={`/${category}`}>See All</Link>
       </div>
   <Slider {...settings} className="">

@@ -151,14 +151,18 @@ const Headphone_Items = () => {
   });
 
 
-  //destructure the category
-  let {category} = headphone_items[0] !== undefined && headphone_items[0];
+//destructure the category name 
+let {category} = headphone_items[0] !== undefined && headphone_items[0];
+
+//remove the undesquare from string
+let category_Withouth_underSquare = category !== undefined ? category.replace(/_/g," ") : "";
+
 
 
   return (
     <>
       <div className="slide-header">
-         <h2>{category}</h2>
+         <p>{category_Withouth_underSquare}</p>
          <Link  to={`/${category}`} className="button buttontext">See All</Link>
       </div>
 

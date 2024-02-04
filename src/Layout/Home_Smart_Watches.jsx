@@ -154,16 +154,18 @@ const Home_Smart_Watches = () => {
     return pro.category === "smart_watches" ;
   })
 
+  //destructure the category name 
+  let {category} = smart_watches[0] !== undefined && smart_watches[0];
 
-  //destructure category from computer items
-  let {category} = smart_watches[0] !== undefined && smart_watches[0]
+  //remove the undesquare from string
+  let category_Withouth_underSquare = category !== undefined ? category.replace(/_/g," ") : "";
 
   
 
   return (
     <>
       <div className="slide-header">
-         <h2>{category}</h2>
+         <p>{category_Withouth_underSquare}</p>
          <Link  to={`/${category}`} className="button buttontext">See All</Link>
       </div>
 

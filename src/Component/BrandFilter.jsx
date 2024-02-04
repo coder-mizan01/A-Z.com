@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import SideFilterCSS from "../CSS/SideFilters.module.css";
+import "../CSS/SideFilters.css";
 
 //icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -57,11 +57,11 @@ const BrandFilter = ({ products }) => {
   return (
     <>
       <div
-        className={`${SideFilterCSS.filter_by_brands} ${
-          showbrand && `${SideFilterCSS.brands_collapse}`
+        className={`filter_by_brands ${
+          `${showbrand && `brands_collapse`}`
         }`}  
       >
-        <div className={SideFilterCSS.toggle_div} onClick={() => {
+        <div className={`toggle_div`} onClick={() => {
           setShowbrand(!showbrand);
         }}>
           <h5>Brands</h5>
@@ -79,7 +79,7 @@ const BrandFilter = ({ products }) => {
 
 
         {[...new Set(products.map((product) => product.brand))].map((uniqueBrand,index)=>{
-           return <div className={SideFilterCSS.brand} key={index}>
+           return <div className={`brand`} key={index}>
             <input
              type="checkbox"
               checked={
@@ -87,7 +87,7 @@ const BrandFilter = ({ products }) => {
               (uniqueBrand === "Hoco" && HocoChecked) || 
               (uniqueBrand === "Fantech" && FantechChecked) 
             }
-             className={SideFilterCSS.brand_checkbox}
+             className={`brand_checkbox`}
              onChange={() => handleBrand(uniqueBrand)}
            />
            <label htmlFor="">{uniqueBrand}</label>

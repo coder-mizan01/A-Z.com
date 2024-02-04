@@ -1,0 +1,162 @@
+
+.category_page_topbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 98%;
+  height: 70px;
+  background-color: #fff;
+  margin: 15px 10px 10px 10px;
+  padding: 0px 8px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.category_page_topbar select {
+  width: 180px;
+  height: 30px;
+  margin: 0px 20px 0px 0px;
+  text-align: center;
+  background-color: #f1f3f5;
+  outline: none;
+  border: none;
+  text-indent: 6px;
+  @media(max-width:768px){
+    width: 150px;
+  }
+}
+
+.category_page_topbar select option {
+  text-align: start;
+  font-size: 0.9rem;
+}
+
+.category_page_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 30px 0px 20px 0px;
+  padding: 0px 10px 0px 10px;
+
+
+}
+
+.category_page_products {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: flex-start;
+ align-items: stretch;
+ margin-top: 0px;
+ width: 100%;
+
+}
+
+.pro {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-top-right-radius: .4em;
+  border-top-left-radius: .4em;
+  width: 250px;
+  max-width:250px;
+  padding: 0;
+  margin: 0px 0px 20px 10px;
+}
+
+.pro a {
+  display: block;
+  
+}
+
+.pro a img {
+  width: 100%;
+  height: auto;
+  max-height:250px;
+  border-top-right-radius: .4em;
+  border-top-left-radius: .4em;
+  
+}
+
+.pro .category_pro_content {
+ padding: 0px 0px 0px 5px;
+}
+
+.pro .category_pro_content a{
+  text-decoration: none;
+  color: #000;
+}
+
+
+@media only screen and (max-width: 1080px){
+  .pro{
+    width: 500px;
+    max-width: 31%;
+  }
+ }
+
+@media only screen and (max-width: 1080px){
+  .pro{
+    width: 500px;
+    max-width: 31%;
+  }
+ }
+
+ @media only screen and (max-width: 990px){
+  .pro{
+    width: 500px;
+    max-width:31%;
+  }
+ }
+
+ @media only screen and (max-width: 768px){
+  .pro{
+    width: 600px;
+    max-width:30%;
+  }
+
+   
+ }
+
+ 
+ @media only screen and (max-width: 500px){
+  .pro{
+    width: 600px;
+    max-width:47%;
+  }
+ }
+ @media only screen and (max-width: 350px){
+  .pro{
+    width: 600px;
+    max-width:47%;
+  }
+  .category_page_products {
+    justify-content: center;
+   }
+ }
+ @media only screen and (max-width: 370px){
+  .pro{
+    width: 250px;
+    max-width:95%;
+  }
+ }
+
+@media only screen and (max-width: 768px){
+.category_page_topbar{
+  height: 60px;
+  padding: 0px 5px;
+}
+
+.category_page_topbar select {
+  margin: 0px 5px 0px 0px;
+}
+}
+
+
+@media(max-width:489px){
+.category_page_topbar {
+   width:95%;
+  }
+  .category_page_topbar select {
+    width:140px;
+  }
+}
