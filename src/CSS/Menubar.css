@@ -31,7 +31,7 @@
 }
 
 .side_nav ul li:hover{
-  background-color: #F5F5F5;
+  background-color: var(--sub-background);
 
 }
 
@@ -39,7 +39,7 @@
   display: block;
   padding: 5px 10px;
   font-size: 1rem; 
-  opacity: 0.9;  
+  opacity: 0.8;  
   font-weight: 500;
   text-transform: capitalize;
   text-align: start;

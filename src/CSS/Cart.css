@@ -74,10 +74,11 @@
   width:180px;
   display: block;
   border: none;
+  border-radius: .3em;
   padding: 10px 20px;
   margin: 10px 0px 0px 0px;
   color: #fff;
-  background-color: #0f3460;
+  background-color: var(--background);
 }
 
 @media (max-width: 768px) {

@@ -1,6 +1,7 @@
 #topheader{
   /*background-color: #0F3460;*/
-  background-color: #0F3460;
+  /*background-color: #0F3460;*/
+  background-color:var(--alpha_background);
   display: flex;
   justify-content:space-between;
   margin: 0;

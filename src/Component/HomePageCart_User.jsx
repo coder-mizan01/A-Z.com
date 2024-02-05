@@ -10,6 +10,9 @@ import { NavLink,Link } from 'react-router-dom';
 //icons
 import { HiOutlineUser } from "react-icons/hi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { FaRegUser } from "react-icons/fa";
+
+
 const HomePageCart_User = () => {
 
     const Cart = useSelector((state)=> state.cart.Cart)
@@ -18,18 +21,14 @@ const HomePageCart_User = () => {
   return (
     <>
        <div className={HeaderCSS.cart_user_div}>
-          <div className={HeaderCSS.cart}>
-            <NavLink to="/cart">
+          <Link  to="/cart" className={HeaderCSS.cart}>
               <AiOutlineShoppingCart className={HeaderCSS.cartIcon} />
                 {Cart.length !== 0 && <span> {Cart.length}</span>} 
-            </NavLink>
-          </div>
+          </Link>
 
-          <div className={HeaderCSS.user}>
-              <Link to={Authentication.email && Authentication.password !== null ? '/dashboard' : '/login'}>
-                <HiOutlineUser className={HeaderCSS.user_icon} />{" "}
-              </Link>
-          </div>
+          <Link className={HeaderCSS.user} to={Authentication.email && Authentication.password !== null ? '/dashboard' : '/login'}>
+              {Authentication.email && Authentication.password !== null ? <p className={HeaderCSS.user_name}>{Authentication.email.slice(0,1)}</p> : <FaRegUser className={HeaderCSS.user_icon} />}
+          </Link>
         </div>
     </>
   )

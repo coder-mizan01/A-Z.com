@@ -43,7 +43,8 @@
   height: auto;
   font-size: 1.8rem;
   font-weight:800;
-  color: #0F3460;
+  opacity: 0.9;
+  color:var(--background);
   text-decoration: none;
 }
 
@@ -70,15 +71,20 @@
 
 .searchBar input{
   width: 100%;
-  background-color: #EEF0F2;
+  background-color:var(--sub-background);
   padding: 9px 16px 10px 20px;
-  border: 1px solid #0F3460;
-  transition:0.1s border ease-in-out;
+  border: none;
   height: 48px;
   outline: none;
   opacity: 1;
   color: black;
   transition: 0.2s;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  &::placeholder{
+    font-weight: 500;
+    opacity: 0.8;
+  }
 }
 
 
@@ -87,7 +93,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0F3460;
+  background-color: var(--background);
   font-weight: 900;
   width: 50px;
   height: 47px;
@@ -102,7 +108,7 @@
 
 .searchIcon {
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .search_value{
@@ -152,25 +158,36 @@
 }
 
 .cart{
-background-color: #F3F5F9;
+display: block;
+background-color: var(--sub-background);
 position: relative;
-padding: 8px;
+width: 45px;
+height: 45px;
 border-radius: 50%;
 overflow: visible;
 z-index: 1;
 }
 
 .cartIcon{
-  font-size: 1.7rem;
-  color: black;
-
+position: absolute;
+width: 27px;
+height:27px;
+color: #000;
+top: 23px;
+left: 21px;
+right: 0;
+bottom: 0;
+transform: translate(-50%,-50%);
 }
 
 .cart span{
   display: flex;
-  background-color: #0F3460;
- /* padding: 0px 8px;*/
+  justify-content: center;
+  align-items: center;
+  background-color:var(--background);
   color: white;
+  font-size: 1rem;
+  font-weight: 500;
   position: absolute;
   border-radius: 50%;
   bottom: 0px;
@@ -179,28 +196,46 @@ z-index: 1;
   top: -5px;
   overflow: visible;
   z-index: 1;
-  width: 20px;
-  height: 20px;
-  justify-content: center;
-  align-items: center;
+  width: 21px;
+  height: 21px;
   
 }
 
 .user{
-  background-color: #F3F5F9;
-  position: relative;
-  padding: 8px;
-  border-radius: 50%;
-  overflow: visible;
-  z-index: 1;
   margin: 0px 15px 0px 15px ;
+display: block;
+background-color: var(--sub-background);
+position: relative;
+width: 45px;
+height: 45px;
+border-radius: 50%;
+overflow: visible;
+z-index: 1;
 }
 
 .user_icon{
-  font-size: 1.6rem;
-  color: black;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  color: #000;
+  top: 22px;
+  left: 22px;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%,-50%);
 }
 
+.user_name{
+  position: absolute;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #000;
+  top: 6px;
+  left: 21px;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%,-50%);
+}
 
 
 @media only screen and (max-width: 1115px) {

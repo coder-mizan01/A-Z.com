@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
-
-import HeaderCSS from "../CSS/Header.module.css";
+import React, { useState } from "react";
 
 import { useSelector } from "react-redux";
+import {useNavigate } from "react-router-dom";
 
-import { Link,useNavigate } from "react-router-dom";
+//sttyles
+import HeaderCSS from "../CSS/Header.module.css";
 
+//api
 import config from "../config.json";
+//icons
+import { IoMdSearch } from "react-icons/io";
 
-import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
 const SearchBar = () => {
   //receive productsObj from allproducts by useSelector
   const productsObj = useSelector((state) => state.allproduct);
@@ -47,7 +49,7 @@ const SearchBar = () => {
           onChange={handleSearch}
         />
         <button type="search">
-          <AiOutlineSearch
+          <IoMdSearch
             className={HeaderCSS.searchIcon}
             style={{ color: "white" }}
           />
