@@ -11,14 +11,15 @@
     reducers : {
         AddtoCart : (state,action) => {
 
-            let {_id,price,product,quantity,title} = action.payload;
+            let {_id,price,product,slug,quantity,title} = action.payload;
             let CartItems;
           
             CartItems = { 
               _id,
               price,
               quantity,
-              title
+              title,
+              slug
             }
              state.Cart = [...state.Cart,CartItems];
             

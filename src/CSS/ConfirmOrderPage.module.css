@@ -143,7 +143,7 @@ border-radius: 5px;
 
 
 .confirm_order_btn{
-    background-color: #0F345F;
+    background-color: var(--alpha_background);
     border-radius: 5px;
     color: #fff;
     padding: 8px 20px;

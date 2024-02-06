@@ -113,6 +113,7 @@ const SingleProduct = () => {
                       price,
                       brand,
                       quantity,
+                      slug
                     }}
                     quantity={QuantityofProduct}
                     name={"Add To Cart"}

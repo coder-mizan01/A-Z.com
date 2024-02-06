@@ -1,30 +1,48 @@
 import React from 'react';
 
+//packages
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
+//api
 import config from "../config.json"
 
-import { DeleteFromCart } from '../Redux/CartItem';
-import { useDispatch } from 'react-redux';
+//icons
+import { RiDeleteBinLine } from "react-icons/ri";
 
-const CartItems = ({_id,price,quantity,title}) => {
+//redux actions
+import { DeleteFromCart } from '../Redux/CartItem';
+
+
+const CartItems = ({_id,price,title,slug,quantity}) => {
 
   const dispatch = useDispatch();
   const handleDelete = () => {
   dispatch(DeleteFromCart(_id))
   }
 
+  
+  //const quantity = useSelector((state)=>state.productquantitycounter.count);
 
   return (
     <>
           <div className='cart-heading'> 
           <div className='cart-product'>
+          <div>
           <img src={`${config.apiUrl}/api/product/product-photo/${_id}`} alt="" />
-           <img src='icon_trash.png' className='detele_icon_img' onClick={handleDelete} ></img>   
+          <RiDeleteBinLine  ssrc='icon_trash.png' className='detele_icon' onClick={handleDelete} />  
+          </div>
+           <Link to={`/SingleProduct/${slug}`}>{title.slice(0,25)} ...</Link>
           </div>
          
 
-          <p>{price}</p>
-          <p className='pro-quantity'>{quantity}</p>
-          <p>{price*quantity}</p>
+          <div className='cart-price'>{price}.TK</div>
+          <div className='cart-quantity'>
+         
+            <p>{quantity}</p>
+
+          </div>
+          <div className='cart-subtotal'>{price*quantity}</div>
           </div>
 
 

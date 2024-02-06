@@ -50,10 +50,10 @@ const Cart = () => {
       ) : (
         <div className="cart">
           <div className="cart-heading">
-            <p className="">product</p>
-            <p className="cart-price">Price</p>
-            <p className="cart-quantity">Quantity</p>
-            <p className="cart-subtotal">Subtotal</p>
+            <div className="cart-product">product</div>
+            <div className="cart-price">Price</div>
+            <div className="cart-quantity">Quantity</div>
+            <div className="cart-subtotal">Subtotal</div>
           </div>
 
           <div className="cart-items">
